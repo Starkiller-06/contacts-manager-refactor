@@ -1,24 +1,31 @@
 {
   "expo": {
-    "name": "contacsts-manager",
-    "slug": "contacsts-manager",
+    "name": "contacts-manager",
+    "slug": "contactsmanager",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "orientation": "portrait", 
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true
     },
+    "plugins": [
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Allow contact_manager to access your contacts."
+        }
+      ]
+    ],
     "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+      "permissions": [
+        "android.permission.READ_CONTACTS"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "12a089a4-9cc9-4f5e-be74-be439a0ad1f4"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "owner": "starkiller_06"
   }
 }
